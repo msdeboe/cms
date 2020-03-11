@@ -1,0 +1,15 @@
+.post-list {
+  width: 400px;
+  justify-content: "center";
+  align-items: "center";
+}
+
+.main-page {
+  background-color: #1b262c;
+  color: #bbe1fa;
+}
+
+.main-page-content {  
+  display: flex;
+  justify-content: center;
+}

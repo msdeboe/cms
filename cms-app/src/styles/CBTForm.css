@@ -1,0 +1,16 @@
+input, textarea {
+    background-color : #0f4c75; 
+    color: #bbe1fa;
+    border: 0px none;
+    border-radius: 5px;
+  }
+
+.cbt-form {
+    border-radius: 25px;
+    background-color: #353B45;
+    padding: 30px;
+    margin-bottom: 5px;
+    margin-right: 15px;
+    height: 100%;
+    width: 500px;
+}
