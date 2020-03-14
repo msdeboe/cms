@@ -1,11 +1,8 @@
-import React, { createContext, Component } from 'react';
-import IPostItem from '../models/IPostItem';
+import React, { createContext } from 'react';
+import IPost from '../models/IPost';
+import IPostContext from '../models/IPostContext';
 
-export interface PostContextInterface {
-    posts: IPostItem[]
-}
-
-const PostContext = createContext<IPostItem[] | null>(null);
+const PostContext = createContext<IPost | null>(null);
 
 export const PostContextProvider = PostContext.Provider;
 
