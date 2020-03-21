@@ -1,0 +1,17 @@
+.single-post {
+    border-radius: 25px;
+    background-color: #353B45;
+    padding: 30px;
+    margin-bottom: 5px;
+    width: 500px;
+}
+
+.good-things {
+    font-size: smaller;
+}
+
+.post-date {
+    font-size: smaller;
+    float: right;
+}
+
