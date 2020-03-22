@@ -2,12 +2,14 @@ import React, { useContext } from 'react';
 import IPostItem from '../models/IPostItem';
 import PostContext from '../context/PostContext';
 import '../styles/Post.css';
+import IPostContext from '../models/IPostContext';
 
 const Post: React.FC = () => {
-    const postContext = useContext(PostContext);
+    const postContext: IPostContext = useContext(PostContext);
     var postArray: any = [];
-    if (postContext) {
-        postContext.Posts.map((post, postIndex) => {
+    console.log(postContext);
+    if (postContext && postContext.posts) {
+        postContext.posts.map((post, postIndex) => {
             var goodThingArray: any = [];
             post.goodThings.map((goodThing, index) => goodThingArray.push(<li key={index}>{goodThing}</li>));
             const fullPost =

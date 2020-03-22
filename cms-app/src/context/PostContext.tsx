@@ -1,11 +1,9 @@
 import React, { createContext } from 'react';
-import IPost from '../models/IPost';
 import IPostContext from '../models/IPostContext';
+import IPostItem from '../models/IPostItem';
+import data from '../testData.json';
 
-const PostContext = createContext<IPost | null>(null);
-
-export const PostContextProvider = PostContext.Provider;
-
-export const PostContextConsumer = PostContext.Consumer;
-
+const jsonData: IPostItem[] = JSON.parse(JSON.stringify(data).toString()) as IPostItem[];
+const PostData: IPostContext = {posts: jsonData};
+const PostContext = createContext<IPostContext>(PostData);
 export default PostContext;

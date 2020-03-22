@@ -1,7 +1,7 @@
 import React, { useEffect, useContext } from 'react';
 import { PostContext } from '../context/PostStore';
-import IPostItem from '../models/IPostItem';
-import { usePost } from '../context/PostHook';
+import SummaryText from './SummaryText';
+import GoodThingInput from './GoodThingInput';
 import './Post.css';
 
 export const Post = () => {
@@ -10,21 +10,25 @@ export const Post = () => {
         setPost({ summary: "helo" });
     }, [setPost]);
     var postArray: any = [];
-    if (postItems && postItems.length > 0) {        
+    if (postItems && postItems.length > 0) {
         postItems.map((post, postIndex) => {
+            const postSummary = post.summary ? post.summary : ' '
             var goodThingArray: any = [];
             if (post.goodThings) {
                 post.goodThings.map((goodThing, index) => goodThingArray.push(<li key={index}>{goodThing}</li>));
             }
             const fullPost =
                 <div key={postIndex} className="single-post">
-                    <h6>Good Things</h6>
-                    <ul className="good-things">
+                    <h4>{post.postDateTime}</h4>
+                    <hr className="style10"></hr>
+                    <ol>
                         {goodThingArray}
-                    </ul>
-                    <h6>Summary</h6>
-                    <p>{post.summary}</p>
-                    <p className="post-date">Posted: {post.postDateTime}</p>
+                    </ol>
+                    <SummaryText
+                        isDisabled={true}
+                        text={postSummary}
+                    />
+
                 </div>;
             postArray.push(fullPost);
         });

@@ -13,3 +13,37 @@
   display: flex;
   justify-content: center;
 }
+
+h1 {
+  display: flex;
+  justify-content: center;
+  margin-block-start: 0em;
+}
+
+textarea {
+  background-color : #0f4c75; 
+  color: #bbe1fa;
+  border: 0px none;
+  border-radius: 5px;
+  resize: vertical;
+}
+
+input[type=text] {
+  background-color : #0f4c75; 
+  font-size: larger;
+  color: #bbe1fa;
+  border: 0px none;
+  border-radius: 5px;
+  height: 30px;
+  padding: 5px;
+}
+
+label {
+  margin-right:"3px";
+  font-weight:"bold";
+  font-size: 24px;
+}
+
+::-webkit-input-placeholder { 
+  color:#FAAAAA;
+}

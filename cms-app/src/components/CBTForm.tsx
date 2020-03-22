@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import ICBTForm from '../models/ICBTForm';
 import GoodThingInput from './GoodThingInput';
-import PostContext, { PostContextConsumer } from '../context/PostContext';
+import PostContext from '../context/PostContext';
 import '../styles/CBTForm.css';
 
 const CBTForm: React.FC<ICBTForm> = (props) => {

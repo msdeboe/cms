@@ -11,7 +11,11 @@
 }
 
 .post-date {
-    font-size: smaller;
-    float: right;
+    font-size: 16px;
+    justify-content: right;
 }
 
+hr.style10 {
+    background-color: #fafafa;
+    float: center;
+}

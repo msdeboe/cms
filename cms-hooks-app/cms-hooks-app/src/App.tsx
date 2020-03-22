@@ -2,27 +2,23 @@ import React from 'react';
 import { PostContext } from './context/PostStore';
 import { usePost } from './context/PostHook';
 import Post from './components/Post';
+import CBTForm from './components/CBTForm';
+import IPostItem from './models/IPostItem';
 import './App.css';
 
 const App = () => {
   const post = usePost();
-  
+
   return (
     <PostContext.Provider value={post}>
       <div className="main-page">
+        <h1>CBT</h1>
         <div className="main-page-content">
-          <h1>Fuck</h1>
-          {/* <CBTForm
+          <CBTForm
             MinGoodThings={2}
-            AddPost={(newPost: IPostItem) => {
-              if (postData && postData.posts) {
-                const newState = postData.posts.push(newPost);
-                return newState;
-              }                
-            }}
-          /> */}
+          />
           <div className="post-list">
-            <Post/>
+            <Post />
           </div>
         </div>
       </div>
